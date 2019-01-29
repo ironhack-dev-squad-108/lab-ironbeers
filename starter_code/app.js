@@ -17,5 +17,31 @@ app.get('/', (req, res, next) => {
 });
 
 
+app.get('/beers', (req, res, next) => {
+  punkAPI.getBeers()
+  .then(beers => {
+    res.render('beers', {beers});
+    })
+    .catch(error => {
+      console.log(error)
+    })
+});
+
+app.get('/random', (req, res, next) => {
+  punkAPI.getRandom()
+  .then(beers => {
+  res.render('random', {
+    beer: beers[0],
+    pairing1: beers[0].food_pairing[0],
+    pairing2: beers[0].food_pairing[1],
+    pairing3: beers[0].food_pairing[2],
+  });
+  console.log(beers)
+  })
+  .catch(error => {
+    console.log(error)
+  })
+});
+
 
 app.listen(3000);
