@@ -1,4 +1,3 @@
-
 const express = require('express');
 const hbs     = require('hbs');
 const app     = express();
@@ -10,12 +9,26 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/beers', (req, res, next) => {
+  
+  let myBeers;
+  punkAPI.getBeers()
+  .then(beers => {
+    res.render('beers', {
+      myBeers: beers
+    } );
+  })
+  .catch(error => {
+    console.log(error)
+  });
 
+
+});
 
 app.get('/', (req, res, next) => {
   res.render('index');
 });
 
-
-
-app.listen(3000);
+app.listen(3000, () => {
+  console.log("App running on http://localhost:3000");
+});
