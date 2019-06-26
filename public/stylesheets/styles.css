@@ -43,7 +43,11 @@ nav {
 }
 
 img {
-  height: 500px;
+  max-height: 300px;
+  width: auto !important; 
+  margin: auto;
+  display: block;
+  padding: 10px;
 }
 
 #beer-glass {
