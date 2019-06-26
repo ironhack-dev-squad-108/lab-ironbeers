@@ -30,11 +30,11 @@ app.get('/beers', (req, res, next) => {
     })
 })
 
-app.get('/random-beer', (req, res, next) => {
+app.get('/random-beers', (req, res, next) => {
   punkAPI.getRandom()
     .then(beers => { // beers is an array with 1 object (yes,it's stupid)
       console.log('DEBUG beers', beers)
-      res.render('random-beer', {
+      res.render('random-beers', {
         beer: beers[0]
       });
     })

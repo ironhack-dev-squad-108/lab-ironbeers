@@ -1,13 +1,16 @@
-<div class="index-container">
-<div>
-    {{#each myBeers}}
-    <img src={{this.image_url}}>
-    <h1>{{this.name}}</h1>
-    <h6>{{this.tagline}}</h6>
-    <p>{{this.description}}</p>
+
+<div class="beer-informations-container">
+{{#each myBeers}}
+<div class="beer-information">
+     <img class="beer-information_img" src={{this.image_url}}>
+    <h2 class="beer-information-name">{{this.name}}</h1>
+    <h3 class="beer-information__tagline">{{this.tagline}}</h6>
+    <p class="beer-information_description">{{this.description}}</p>
 </div>
  {{/each}}
 </div>
+
+
 
 
 
