@@ -33,8 +33,8 @@ app.get('/beers', (req, res, next) => {
     })
 });
 
-// Route http://localhost:3000/random-beer
-app.get('/random-beer', (req, res, next) => {
+// Route http://localhost:3000/random-beers
+app.get('/random-beers', (req, res, next) => {
   punkAPI.getRandom()
   .then(beers => {
     console.log("DEBUG beers", beers)

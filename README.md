@@ -76,7 +76,7 @@ At the end of this iteratiom, your website should be like this:
 
 ## Iteration 5 - Random Beer
 
-Finally, let's create our `/random-beer` route. Inside our route you should call the `getRandom()` method of the PunkAPI package and after receiving the info, render the `randomBeer.hbs` file and pass the data of the beer.
+Finally, let's create our `/random-beers` route. Inside our route you should call the `getRandom()` method of the PunkAPI package and after receiving the info, render the `randomBeer.hbs` file and pass the data of the beer.
 
 ```javascript
 punkAPI.getRandom()
