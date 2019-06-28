@@ -1,0 +1,27 @@
+{{!-- {{#each beers}}
+<div class="m-4">
+<div><h4>{{this.name}}</h4></div>
+<div><span class="text-muted font-italic">{{this.tagline}}</span></div>
+<div class="mt-2"><p>{{this.description}}</p></div>
+</div>
+
+{{/each}} --}}
+
+<div class="d-flex  flex-wrap  justify-content-center">
+{{#each beers}}
+<div class="card m-3 p-4 shadow" style="max-width: 500px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src={{this.image_url}} class="card-img" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <p class="card-text"><small class="text-muted">{{this.tagline}}</small></p>
+        <p class="card-text text-justify">{{this.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+</div>
