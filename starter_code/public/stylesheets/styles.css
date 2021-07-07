@@ -6,3 +6,76 @@ grey: rgba(145, 145, 145, 0.481);
 font-family: Arial, Helvetica, sans-serif
 */
   
+body {
+
+}
+
+nav {
+  background-color: #2081C3;
+  line-height: 40px;
+  font-weight: bold;
+  margin: auto;
+  text-align: left;
+}
+
+a {
+  color: #F7F9F9;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 40px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  color: grey;
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.index-container {
+  display: flex;
+  text-align: center;
+  margin: 0 200;
+  flex-direction: column;
+  align-content: center;
+}
+
+img {
+  width: 20%;
+  padding: 40px;
+  margin-left: auto;
+}
+
+button {
+background-color: #2081C3;
+color: white;
+font-weight: bold;
+padding: 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 11px;
+margin: 8px;
+border: none;
+border-radius: 8px;
+box-shadow: 1px 1px 1px 1px #888888;
+}
+
+#beerContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+
+#beerInfo {
+  width: 400px;
+  margin: 0 20px;
+}
